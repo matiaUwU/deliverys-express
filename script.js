@@ -31,7 +31,7 @@ function sendOrder() {
         message += `- ${item.name}: $${item.price.toFixed(2)}%0A`;
     });
     message += `%0ADirección de entrega: ${direccion}`;
-    const phoneNumber = "591 63699754";
+    const phoneNumber = "59163699754";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappURL, "_blank");
 }
