@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Express</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/eeee.png" type="image/x-icon"> <!-- Cambia la ruta según corresponda -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <h1>Delivery Express</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Las mejores comidas, a tu puerta</h2>
+        <p>Entrega rápida y segura de alimentos frescos y de calidad.</p>
+        <a href="#productos" class="btn">Ver Productos</a>
+    </div>
+</section>
+
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+
+        <!-- Snacks -->
+        <h3>Snacks</h3>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="img/ala.lnk" alt="Ala">
+                <h3>Ala</h3>
+                <p><strong>Precio:</strong> 8Bs</p>
+                <button class="btn" onclick="addToCart('Ala', 8)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/pierna.lnk" alt="Pierna">
+                <h3>Pierna</h3>
+                <p><strong>Precio:</strong> 8Bs</p>
+                <button class="btn" onclick="addToCart('Pierna', 8)">Ordenar ahora</button>            
+            </div>
+            <div class="producto">
+                <img src="img/pecho.lnk" alt="Pecho">
+                <h3>Pecho</h3>
+                <p><strong>Precio:</strong> 12bs</p>
+                <button class="btn" onclick="addToCart('Pecho', 12)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/entre pierna.lnk" alt="Entre Pierna">
+                <h3>Entre Pierna</h3>
+                <p><strong>Precio:</strong> 10Bs</p>
+                <button class="btn" onclick="addToCart('Entre Pierna', 10)">Ordenar ahora</button>
+            </div>
+        </div>
+
+        <!-- Bebidas -->
+        <h3>Bebidas</h3>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="img/Coca.jpg" alt="Coca Cola 2L">
+                <h3>Coca Cola 2L</h3>
+                <p><strong>Precio:</strong> 10Bs</p>
+                <button class="btn" onclick="addToCart('Coca Cola 2L', 10)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/Coca.jpg" alt="Coca Cola 3L">
+                <h3>Coca Cola 3L</h3>
+                <p><strong>Precio:</strong> 15Bs</p>
+                <button class="btn" onclick="addToCart('Coca Cola 3L', 15)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/Sprite 2L.lnk" alt="Sprite 2L">
+                <h3>Sprite 2L</h3>
+                <p><strong>Precio:</strong> 10Bs</p>
+                <button class="btn" onclick="addToCart('Sprite 2L', 10)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/fanta.lnk" alt="Fanta 2L">
+                <h3>Fanta 2L</h3>
+                <p><strong>Precio:</strong> 10Bs</p>
+                <button class="btn" onclick="addToCart('Fanta 2L', 10)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/fanta3L.jpg" alt="Fanta 3L">
+                <h3>Fanta 3L</h3>
+                <p><strong>Precio:</strong> 15Bs</p>
+                <button class="btn" onclick="addToCart('Fanta 3L', 15)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/Del valle.lnk" alt="Jugo del Valle">
+                <h3>Jugo del Valle</h3>
+                <p><strong>Precio:</strong> 15Bs</p>
+                <button class="btn" onclick="addToCart('Jugo del Valle', 12)">Ordenar ahora</button>
+            </div>
+            <div class="producto">
+                <img src="img/persona.jpg" alt="Refresco Personal">
+                <h3>Refresco Personal</h3>
+                <p><strong>Precio:</strong> 3Bs</p>
+                <button class="btn" onclick="addToCart('Refresco Personal', 3)">Ordenar ahora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="cartItems"></ul>
+        <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+        <button class="btn" onclick="sendOrder()">Enviar pedido por WhatsApp</button>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas o necesitas ayuda? Contáctanos:</p>
+        <form action="#" method="post">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Delivery Express. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
